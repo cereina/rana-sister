@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        try {
-            Scanner scanner = new Scanner (System.in);
+        try(Scanner scanner = new Scanner (System.in)) {
             String [] names = new String[3] ;
             double [] grades = new double[3];
 
@@ -33,8 +32,7 @@ public class Main {
             System.out.println(average/3 + " is the class average grade.");
 
         }
-        catch (Exception e) {
-            e.printStackTrace(); 
+        catch (Exception e) { 
         }
     
     }
